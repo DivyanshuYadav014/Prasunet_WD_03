@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #e4e4e4; /* Very light grey for the background */
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* Elegant serif font */
+}
+
+.container {
+  text-align: center;
+  padding: 10px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.player {
+  background: #f5e1da; /* Soft peach for player boxes */
+  padding: 15px;
+  border-radius: 12px;
+  color: #5c5c5c; /* Medium grey for text */
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff7f0; /* Very light cream for the cells */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #5c5c5c; /* Medium grey for default text */
+  transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffc107; /* Soft gold glow on hover */
+}
+
+.cell.X {
+  color: #c93f38; /* Luxurious deep coral for X */
+  text-shadow: 0 0 10px #c93f38, 0 0 15px #c93f38;
+}
+
+.cell.O {
+  color: #3a5a9a; /* Rich royal blue for O */
+  text-shadow: 0 0 10px #3a5a9a, 0 0 15px #3a5a9a;
+}
+
+#resetBtn {
+  background: #ffd7b5; /* Light peach for the reset button */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #5c5c5c; /* Medium grey for text */
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 10px rgba(255, 215, 181, 0.5);
+}
+
+#resetBtn:hover {
+  background: #ffbc8a; /* Darker peach on hover */
+  box-shadow: 0 5px 15px rgba(255, 188, 138, 0.5);
+}
